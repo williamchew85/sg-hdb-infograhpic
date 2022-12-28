@@ -26,7 +26,11 @@ class HDBInfo extends React.Component {
               <th>Location</th>
               <th>Type</th>
               <th>Size (sq ft)</th>
-              <th>Price</th>
+              <th>Sales Price</th>
+              <th>Rental Price</th>
+              <th>Demographics</th>
+              <th>Infrastructure</th>
+              <th>Building Details</th>
             </tr>
           </thead>
           <tbody>
@@ -35,7 +39,11 @@ class HDBInfo extends React.Component {
                 <td>{row.location}</td>
                 <td>{row.type}</td>
                 <td>{row.size}</td>
-                <td>{row.price}</td>
+                <td>{row.sales_price}</td>
+                <td>{row.rental_price}</td>
+                <td>{row.demographics}</td>
+                <td>{row.infrastructure}</td>
+                <td>{row.building_details}</td>
               </tr>
             ))}
           </tbody>
