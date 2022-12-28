@@ -3,8 +3,12 @@ import requests
 class HDBData:
   @staticmethod
   def getData(callback):
+    # define the API endpoint and the authentication token
+    endpoint = 'https://api.data.gov.sg/v1/hdb/data'
+    token = 'YOUR_AUTH_TOKEN'
+
     # make a request to the HDB DataMall API to retrieve the HDB data
-    data = requests.get('https://api.data.gov.sg/v1/hdb/data')
+    data = requests.get(endpoint, headers={'Authorization': f'Bearer {token}'})
     data = data.json()
 
     # process the data and return it to the callback function
